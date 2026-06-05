@@ -1113,6 +1113,10 @@ h3 {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .request-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1180,7 +1184,8 @@ h3 {
   .section,
   .inventory-band,
   .brand-section,
-  .gallery-section {
+  .gallery-section,
+  .request-section {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -1195,6 +1200,36 @@ h3 {
   .brand-strip,
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .request-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+  .request-grid {
+    gap: 16px;
+  }
+
+  .request-panel {
+    gap: 22px;
+    padding: 22px;
+  }
+
+  .request-panel-head {
+    grid-template-columns: 1fr;
+  }
+
+  .request-panel h3 {
+    font-size: 1.45rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .request-form .button {
+    width: 100%;
   }
 
   .moto-card figure {
