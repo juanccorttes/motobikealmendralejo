@@ -1,5 +1,6 @@
 const whatsappBase =
   "https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller.";
+const whatsappNumber = "34642159647";
 
 // Stock de ejemplo. Sustituir por motos reales del cliente: modelo, precio, fotos, año, km y estado.
 const motorcycles = [
@@ -70,6 +71,7 @@ const filterButtons = document.querySelectorAll("[data-filter]");
 const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
+const whatsappForms = document.querySelectorAll("[data-whatsapp-form]");
 
 function motorcycleLabel(type) {
   return type === "new" ? "Nueva" : "Segunda mano";
@@ -123,6 +125,51 @@ nav.querySelectorAll("a").forEach((link) => {
     nav.classList.remove("is-open");
     document.body.classList.remove("is-menu-open");
     menuToggle.setAttribute("aria-label", "Abrir menú");
+  });
+});
+
+function valueFromForm(form, name) {
+  return new FormData(form).get(name)?.toString().trim() || "";
+}
+
+function buildServiceMessage(form) {
+  const wantsNotification = form.querySelector('[name="aviso"]')?.checked ? "Sí" : "No";
+
+  return [
+    "Hola, vengo de la web y quiero solicitar cita de taller.",
+    "",
+    `Nombre: ${valueFromForm(form, "nombre")}`,
+    `Teléfono: ${valueFromForm(form, "telefono")}`,
+    `Moto: ${valueFromForm(form, "moto")}`,
+    `Servicio: ${valueFromForm(form, "servicio")}`,
+    `Aviso al finalizar reparación: ${wantsNotification}`,
+    `Detalles: ${valueFromForm(form, "detalles") || "Sin detalles adicionales"}`,
+  ].join("\n");
+}
+
+function buildMotoMessage(form) {
+  return [
+    "Hola, vengo de la web y estoy buscando una moto.",
+    "",
+    `Marca preferida: ${valueFromForm(form, "marca")}`,
+    `Tipo de moto: ${valueFromForm(form, "tipo")}`,
+    `Presupuesto: ${valueFromForm(form, "presupuesto") || "Por definir"}`,
+    `Estado: ${valueFromForm(form, "estado")}`,
+    `Comentarios: ${valueFromForm(form, "comentarios") || "Sin comentarios adicionales"}`,
+  ].join("\n");
+}
+
+whatsappForms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    const message = form.dataset.formType === "service" ? buildServiceMessage(form) : buildMotoMessage(form);
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
   });
 });
 

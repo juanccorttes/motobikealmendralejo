@@ -33,6 +33,7 @@
         <a href="#taller">Taller</a>
         <a href="#motos">Motos</a>
         <a href="#recambios">Recambios</a>
+        <a href="#solicitudes">Solicitudes</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -166,27 +167,25 @@
         </div>
       </section>
 
-      <section class="about-band">
-        <div class="about-copy">
-          <p class="eyebrow">Sobre el taller</p>
-          <h2>Un taller local con trato directo y mentalidad motera.</h2>
-          <p>
-            MotoBike Service combina venta, taller y recambios para que el cliente no tenga que ir saltando de un sitio a otro. La web está pensada para convertir visitas de Instagram en llamadas, consultas por WhatsApp y visitas al taller.
-          </p>
-        </div>
-        <div class="stats-row" aria-label="Puntos fuertes">
-          <div>
-            <strong>Beta</strong>
-            <span>Servicio oficial</span>
+      <section class="about-band" aria-label="Sobre el taller">
+        <div class="about-band-inner">
+          <div class="about-copy">
+            <p class="eyebrow">Sobre el taller</p>
+            <h2>Trato directo, taller real y pasión por las motos.</h2>
+            <p>
+              En MotoBike Almendralejo te atiende alguien que vive el mundo de la moto desde dentro. Venta, taller, recambios y asesoramiento cercano para que encuentres justo lo que necesitas.
+            </p>
+            <a class="button button-primary" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller." target="_blank" rel="noreferrer">
+              Hablar por WhatsApp
+            </a>
           </div>
-          <div>
-            <strong>48</strong>
-            <span>Avda. Juan Carlos R. Ibarra</span>
-          </div>
-          <div>
-            <strong>Local</strong>
-            <span>Almendralejo y comarca</span>
-          </div>
+          <figure class="about-image">
+            <img
+              src="public/images/cliente-motobike.png"
+              alt="Responsable de MotoBike Almendralejo en el taller con motos"
+              loading="lazy"
+            />
+          </figure>
         </div>
       </section>
 
@@ -195,13 +194,21 @@
           <p class="eyebrow">Marcas habituales</p>
           <h2>Trabajamos con motos de distintas marcas.</h2>
         </div>
-        <div class="brand-strip" aria-label="Marcas">
-          <span>Honda</span>
-          <span>Kawasaki</span>
-          <span>Rieju</span>
-          <span>GasGas</span>
-          <span>Beta</span>
-          <span>Otras marcas</span>
+        <div class="brand-strip" aria-label="Marcas habituales">
+          <div class="brand-track">
+            <span>Honda</span>
+            <span>Kawasaki</span>
+            <span>Rieju</span>
+            <span>GasGas</span>
+            <span>Beta</span>
+            <span>Otras marcas</span>
+            <span aria-hidden="true">Honda</span>
+            <span aria-hidden="true">Kawasaki</span>
+            <span aria-hidden="true">Rieju</span>
+            <span aria-hidden="true">GasGas</span>
+            <span aria-hidden="true">Beta</span>
+            <span aria-hidden="true">Otras marcas</span>
+          </div>
         </div>
       </section>
 
@@ -226,6 +233,112 @@
               <strong>@motobikealmendralejo</strong>
             </blockquote>
           </figure>
+        </div>
+      </section>
+
+      <section class="request-section" id="solicitudes">
+        <div class="section-heading compact">
+          <p class="eyebrow">Solicitudes online</p>
+          <h2>Citas de taller y búsqueda de motos, directo por WhatsApp.</h2>
+        </div>
+
+        <div class="request-grid">
+          <article class="request-panel">
+            <div class="request-panel-head">
+              <span>01</span>
+              <div>
+                <h3>Reserva taller y recibe aviso</h3>
+                <p>Solicita cita para revisión, reparación o recambios. También puedes pedir que te avisen cuando la moto esté terminada.</p>
+              </div>
+            </div>
+
+            <form class="request-form" data-whatsapp-form data-form-type="service">
+              <label>
+                Nombre
+                <input type="text" name="nombre" autocomplete="name" required />
+              </label>
+              <label>
+                Teléfono
+                <input type="tel" name="telefono" autocomplete="tel" required />
+              </label>
+              <div class="form-row">
+                <label>
+                  Moto
+                  <input type="text" name="moto" placeholder="Marca y modelo" required />
+                </label>
+                <label>
+                  Servicio
+                  <select name="servicio" required>
+                    <option value="">Seleccionar</option>
+                    <option>Revisión</option>
+                    <option>Reparación</option>
+                    <option>Neumáticos</option>
+                    <option>Recambios</option>
+                    <option>Preparación ITV</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Detalles
+                <textarea name="detalles" rows="4" placeholder="Cuéntanos qué necesita la moto"></textarea>
+              </label>
+              <label class="check-field">
+                <input type="checkbox" name="aviso" value="Sí" />
+                Quiero aviso cuando la reparación esté finalizada
+              </label>
+              <button class="button button-primary" type="submit">Enviar solicitud</button>
+            </form>
+          </article>
+
+          <article class="request-panel request-panel-dark">
+            <div class="request-panel-head">
+              <span>02</span>
+              <div>
+                <h3>Dinos qué moto estás buscando</h3>
+                <p>Recopilamos modelos, presupuestos y preferencias para detectar demanda real y localizar motos que encajen.</p>
+              </div>
+            </div>
+
+            <form class="request-form" data-whatsapp-form data-form-type="moto">
+              <div class="form-row">
+                <label>
+                  Marca
+                  <input type="text" name="marca" placeholder="Honda, Beta, Yamaha..." required />
+                </label>
+                <label>
+                  Tipo
+                  <select name="tipo" required>
+                    <option value="">Seleccionar</option>
+                    <option>Scooter</option>
+                    <option>125 cc</option>
+                    <option>Trail</option>
+                    <option>Carretera</option>
+                    <option>Enduro / off-road</option>
+                    <option>Otra</option>
+                  </select>
+                </label>
+              </div>
+              <div class="form-row">
+                <label>
+                  Presupuesto
+                  <input type="text" name="presupuesto" placeholder="Ej. hasta 3.500 EUR" />
+                </label>
+                <label>
+                  Estado
+                  <select name="estado">
+                    <option>Nueva o de ocasión</option>
+                    <option>Nueva</option>
+                    <option>Segunda mano</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                Comentarios
+                <textarea name="comentarios" rows="4" placeholder="Cilindrada, uso, carnet, modelos que te gustan..."></textarea>
+              </label>
+              <button class="button button-outline" type="submit">Consultar moto</button>
+            </form>
+          </article>
         </div>
       </section>
 
