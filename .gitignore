@@ -41,6 +41,7 @@ build/Release
 *.tsbuildinfo
 
 # Framework build output and caches
+.vite/
 .cache
 .parcel-cache
 .next
