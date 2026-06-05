@@ -316,7 +316,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: min(1180px, calc(100% - 48px));
-  margin: -58px auto 0;
+  margin: -74px auto 0;
   background: var(--white);
   color: var(--ink);
   border-radius: 8px 8px 0 0;
@@ -324,18 +324,85 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.hero-next span {
-  padding: 18px 24px;
+.hero-next a {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  min-height: 118px;
+  padding: 22px 26px 24px;
   border-right: 1px solid var(--line);
-  font-weight: 950;
+  background:
+    linear-gradient(135deg, rgba(239, 123, 34, 0.12), transparent 42%),
+    var(--white);
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.hero-next span:last-child {
+.hero-next a::after {
+  content: "->";
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  color: var(--orange);
+  font-weight: 950;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.hero-next a:hover,
+.hero-next a:focus-visible {
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(215, 38, 30, 0.9), rgba(239, 123, 34, 0.88)),
+    var(--red);
+  transform: translateY(-2px);
+}
+
+.hero-next a:hover::after,
+.hero-next a:focus-visible::after {
+  color: var(--white);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero-next a:last-child {
   border-right: 0;
 }
 
+.hero-next span,
+.hero-next strong,
+.hero-next small {
+  display: block;
+}
+
+.hero-next span {
+  color: var(--red);
+  font-size: 0.76rem;
+  font-weight: 950;
+}
+
+.hero-next a:hover span,
+.hero-next a:focus-visible span,
+.hero-next a:hover small,
+.hero-next a:focus-visible small {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.hero-next strong {
+  font-size: 1.16rem;
+  line-height: 1.1;
+}
+
+.hero-next small {
+  max-width: 260px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
 .section {
-  padding: 118px 24px 88px;
+  padding: 88px 24px;
 }
 
 .section-light {
@@ -1096,16 +1163,17 @@ h3 {
   .hero-next {
     grid-template-columns: 1fr;
     width: calc(100% - 32px);
-    margin-top: -34px;
+    margin-top: -42px;
   }
 
-  .hero-next span {
-    padding: 13px 16px;
+  .hero-next a {
+    min-height: 92px;
+    padding: 18px 18px 18px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .hero-next span:last-child {
+  .hero-next a:last-child {
     border-bottom: 0;
   }
 
