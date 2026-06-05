@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="MotoBike Almendralejo: taller de motos, venta de motos nuevas y de segunda mano, recambios y accesorios en Almendralejo."
+    />
+    <title>MotoBike Almendralejo | Taller, motos y recambios</title>
+    <link rel="preload" href="assets/hero-workshop.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="MotoBike Almendralejo">
+        <img
+          class="brand-logo"
+          src="/images/logo.jpg"
+          alt="MotoBike Service"
+          width="180"
+          height="48"
+        />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" data-nav>
+        <a href="#taller">Taller</a>
+        <a href="#motos">Motos</a>
+        <a href="#recambios">Recambios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="header-cta" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller." target="_blank" rel="noreferrer">
+        WhatsApp
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Taller de motos en Almendralejo</p>
+            <h1>MotoBike Almendralejo</h1>
+            <p class="hero-lead">
+              Taller, venta de motos nuevas y de segunda mano, recambios y accesorios con trato cercano y servicio profesional.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#motos">Ver motos en venta</a>
+              <a class="button button-outline" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller." target="_blank" rel="noreferrer">
+                Contactar por WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <aside class="hero-panel" aria-label="Datos destacados">
+            <div>
+              <span class="panel-kicker">Servicio oficial</span>
+              <strong>Concesionario Beta</strong>
+            </div>
+            <div>
+              <span class="panel-kicker">Venta y taller</span>
+              <strong>Nuevas, ocasión y recambios</strong>
+            </div>
+            <div>
+              <span class="panel-kicker">Contacto directo</span>
+              <strong>642 15 96 47</strong>
+            </div>
+          </aside>
+        </div>
+        <div class="hero-next">
+          <span>Taller</span>
+          <span>Motos</span>
+          <span>Recambios</span>
+        </div>
+      </section>
+
+      <section class="section section-light" id="taller">
+        <div class="section-heading">
+          <p class="eyebrow">Servicio de taller</p>
+          <h2>Todo lo que necesita tu moto en un mismo sitio.</h2>
+          <p>
+            Mantenimiento, revisiones, recambios y puesta a punto con una atención cercana para motoristas de Almendralejo y alrededores.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <span class="service-icon">01</span>
+            <h3>Reparación y mantenimiento</h3>
+            <p>Averías, ajustes, cambios de aceite, frenos, transmisión y mantenimiento general.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">02</span>
+            <h3>Revisiones periódicas</h3>
+            <p>Control completo de puntos clave para circular con seguridad y evitar sorpresas.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">03</span>
+            <h3>Neumáticos</h3>
+            <p>Asesoramiento, montaje y equilibrado para scooter, carretera, trail y off-road.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">04</span>
+            <h3>Diagnosis</h3>
+            <p>Revisión técnica y localización de fallos para motos modernas y sistemas electrónicos.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">05</span>
+            <h3>Preparación ITV</h3>
+            <p>Puesta a punto previa para llegar a la inspección con la moto lista.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon">06</span>
+            <h3>Recambios y accesorios</h3>
+            <p>Piezas, consumibles, equipamiento y accesorios para mantener o mejorar tu moto.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="inventory-band" id="motos">
+        <div class="inventory-intro">
+          <div>
+            <p class="eyebrow">Motos en venta</p>
+            <h2>Nuevas y de segunda mano listas para consultar.</h2>
+          </div>
+          <p>
+            Stock preparado como base editable. Cuando el cliente pase modelos, fotos y precios reales, se sustituyen en el array de motos.
+          </p>
+        </div>
+
+        <div class="inventory-tabs" role="tablist" aria-label="Filtrar motos">
+          <button class="tab-button is-active" type="button" data-filter="all">Todas</button>
+          <button class="tab-button" type="button" data-filter="new">Nuevas</button>
+          <button class="tab-button" type="button" data-filter="used">Segunda mano</button>
+        </div>
+
+        <div class="motorcycle-grid" data-motorcycle-grid></div>
+      </section>
+
+      <section class="parts-section" id="recambios">
+        <div class="parts-image">
+          <img src="assets/used-moto-workshop.png" alt="Moto revisada en taller" loading="lazy" />
+        </div>
+        <div class="parts-copy">
+          <p class="eyebrow">Recambios y accesorios</p>
+          <h2>Piezas para reparar, mantener y personalizar.</h2>
+          <p>
+            Recambios originales y compatibles, consumibles, accesorios y asesoramiento para encontrar la pieza adecuada.
+          </p>
+          <ul class="check-list">
+            <li>Recambios para mantenimiento y reparación.</li>
+            <li>Accesorios para carretera, scooter, trail y off-road.</li>
+            <li>Consulta rapida por WhatsApp con marca, modelo y pieza.</li>
+          </ul>
+          <a class="button button-primary" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20recambios%20para%20mi%20moto." target="_blank" rel="noreferrer">
+            Pedir recambio
+          </a>
+        </div>
+      </section>
+
+      <section class="about-band">
+        <div class="about-copy">
+          <p class="eyebrow">Sobre el taller</p>
+          <h2>Un taller local con trato directo y mentalidad motera.</h2>
+          <p>
+            MotoBike Service combina venta, taller y recambios para que el cliente no tenga que ir saltando de un sitio a otro. La web está pensada para convertir visitas de Instagram en llamadas, consultas por WhatsApp y visitas al taller.
+          </p>
+        </div>
+        <div class="stats-row" aria-label="Puntos fuertes">
+          <div>
+            <strong>Beta</strong>
+            <span>Servicio oficial</span>
+          </div>
+          <div>
+            <strong>48</strong>
+            <span>Avda. Juan Carlos R. Ibarra</span>
+          </div>
+          <div>
+            <strong>Local</strong>
+            <span>Almendralejo y comarca</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="brand-section">
+        <div class="section-heading compact">
+          <p class="eyebrow">Marcas habituales</p>
+          <h2>Trabajamos con motos de distintas marcas.</h2>
+        </div>
+        <div class="brand-strip" aria-label="Marcas">
+          <span>Honda</span>
+          <span>Kawasaki</span>
+          <span>Rieju</span>
+          <span>GasGas</span>
+          <span>Beta</span>
+          <span>Otras marcas</span>
+        </div>
+      </section>
+
+      <section class="gallery-section" aria-label="Galeria del taller">
+        <div class="section-heading compact">
+          <p class="eyebrow">Galeria</p>
+          <h2>Ambiente de taller, venta y entregas.</h2>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item large">
+            <img src="assets/hero-workshop.png" alt="Taller MotoBike con motos" loading="lazy" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/new-motos.png" alt="Motos nuevas en exposición" loading="lazy" />
+          </figure>
+          <figure class="gallery-item">
+            <img src="assets/used-moto-workshop.png" alt="Moto de ocasión revisada" loading="lazy" />
+          </figure>
+          <figure class="gallery-item accent">
+            <blockquote>
+              <span>Instagram</span>
+              <strong>@motobikealmendralejo</strong>
+            </blockquote>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto">
+        <div class="contact-copy">
+          <p class="eyebrow">Contacto</p>
+          <h2>Reserva taller o pregunta por una moto.</h2>
+          <p>
+            Atencion directa por WhatsApp, Instagram o visita al taller en Almendralejo.
+          </p>
+          <div class="contact-actions">
+            <a class="button button-primary" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller." target="_blank" rel="noreferrer">
+              Escribir por WhatsApp
+            </a>
+            <a class="button button-dark" href="https://www.google.com/maps/search/?api=1&query=Avda.%20Juan%20Carlos%20Rodr%C3%ADguez%20Ibarra%2048%20Almendralejo" target="_blank" rel="noreferrer">
+              Abrir Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-row">
+            <span>Telefono / WhatsApp</span>
+            <strong>642 15 96 47</strong>
+          </div>
+          <div class="contact-row">
+            <span>Instagram</span>
+            <strong>@motobikealmendralejo</strong>
+          </div>
+          <div class="contact-row">
+            <span>Dirección</span>
+            <strong>Avda. Juan Carlos Rodríguez Ibarra 48, Almendralejo</strong>
+          </div>
+          <div class="contact-row">
+            <span>Horario</span>
+            <strong>Horario pendiente de confirmar</strong>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><strong>MotoBike Almendralejo</strong> / MotoBike Service</p>
+      <p>Taller, motos nuevas, motos de ocasión y recambios en Almendralejo.</p>
+    </footer>
+
+    <a class="floating-whatsapp" href="https://wa.me/34642159647?text=Hola%2C%20vengo%20de%20la%20web%20y%20quiero%20informaci%C3%B3n%20sobre%20una%20moto%20%2F%20servicio%20de%20taller." target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp">
+      WA
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
